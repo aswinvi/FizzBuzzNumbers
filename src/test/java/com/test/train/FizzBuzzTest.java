@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 
 class FizzBuzzTest {
 
+	private static final String FIZZ = "Fizz";
+
 	FizzBuzz fizzBuzz;
 
 	@BeforeEach
@@ -18,4 +20,8 @@ class FizzBuzzTest {
 		Assertions.assertEquals("2", fizzBuzz.compute(2));
 	}
 
+	@Test
+	void shouldReturnFizzIfTheNumberIsDivisibleBy_3() {
+		Assertions.assertEquals(FIZZ, fizzBuzz.compute(6));
+	}
 }
